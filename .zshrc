@@ -104,12 +104,18 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin:$PATH"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/icu4c/lib/pkgconfig"
 
-export PATH="/usr/local/opt/python@3.7/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
-export PATH=$PATH:/Users/kp/go/bin
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+export PATH="$PATH:/Users/kp/go/bin"
+export PATH="$PATH:/Users/kp/.local/bin"
+
 alias nproc="sysctl -n hw.logicalcpu"
+
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+export LDFLAGS=-L/usr/local/opt/openssl@3/lib
+export CPPFLAGS=-I/usr/local/opt/openssl@3/include
+
