@@ -21,6 +21,21 @@ return require('packer').startup(function()
     config = function() require'lspconfig'.tsserver.setup{} end
   }
 
+  -- TreeSitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+
+    config = function()
+      require'nvim-treesitter.configs'.setup {
+        ensure_installed = { 'rust', 'zig', 'python', 'typescript', 'javascript' }, 
+        highlight = {
+          enable = true
+        },
+      }
+    end
+  }
+
   -- Formatter
   use {
     'mhartington/formatter.nvim',
@@ -41,5 +56,29 @@ return require('packer').startup(function()
         }
       })
     end
+  }
+
+  use { 
+    'akinsho/toggleterm.nvim',
+    
+    require("toggleterm").setup{
+      open_mapping = [[<c-t>]],
+      hide_numbers = true, -- hide the number column in toggleterm buffers
+      start_in_insert = true,
+      insert_mappings = true, -- whether or not the open mapping applies in insert mode
+      persist_size = true,
+      direction = 'float',
+      close_on_exit = true, -- close the terminal window when the process exits
+      shell = vim.o.shell, -- change the default shell
+      
+      float_opts = {
+        border = 'single', 
+        winblend = 0,
+        highlights = {
+          border = "Normal",
+          background = "Normal",
+        }
+      }
+    }
   }
 end)
