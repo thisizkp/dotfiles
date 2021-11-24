@@ -12,7 +12,14 @@ return require('packer').startup(function()
   -- Search
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { {'nvim-lua/plenary.nvim'} },
+    config = function() require'telescope'.setup {} end
+  }
+
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim', 
+    run = 'make',
+    require('telescope').load_extension('fzf')
   }
 
   -- LSP
@@ -51,6 +58,7 @@ return require('packer').startup(function()
       require('formatter').setup({
         filetype = {
           javascript = {prettierConfig},
+          javascriptreact = {prettierConfig},
           typescript = {prettierConfig},
           typescriptreact = {prettierConfig}
         }
