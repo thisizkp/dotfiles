@@ -100,22 +100,21 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+# End of Default Config 
 
-export PATH="/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin:$PATH"
-export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/icu4c/lib/pkgconfig"
-
-export PATH="/usr/local/opt/python@3.7/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
-export PATH="$PATH:/Users/kp/go/bin"
-export PATH="$PATH:/Users/kp/.local/bin"
+### Custom Config
 
 alias nproc="sysctl -n hw.logicalcpu"
-
-export PATH="/usr/local/opt/openssl@3/bin:$PATH"
-export LDFLAGS=-L/usr/local/opt/openssl@3/lib
-export CPPFLAGS=-I/usr/local/opt/openssl@3/include
 
 alias luamake=/Users/kp/code/lua-language-server/3rd/luamake/luamake
 export PATH="$PATH:/Users/kp/code/lua-language-server/bin"
 
 alias nv='nvim'
+
+. /usr/local/opt/asdf/libexec/asdf.sh
+export GOPATH="$HOME/go"
+export PATH="/usr/local/opt/icu4c/bin:/usr/local/opt/icu4c/sbin:$GOPATH/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/local/opt/icu4c/lib/pkgconfig"
+export LDFLAGS=-L/usr/local/opt/openssl@1.1/lib
+export CPPFLAGS=-I/usr/local/opt/openssl@1.1/include
