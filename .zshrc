@@ -106,9 +106,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias nproc="sysctl -n hw.logicalcpu"
 
-alias luamake=/Users/kp/code/lua-language-server/3rd/luamake/luamake
-export PATH="$PATH:/Users/kp/code/lua-language-server/bin"
-
 alias nv='nvim'
 
 . /usr/local/opt/asdf/libexec/asdf.sh
