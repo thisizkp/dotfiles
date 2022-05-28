@@ -4,8 +4,8 @@ local map = vim.api.nvim_set_keymap
 -- remap the key used to leave insert mode
 map('i', 'jk', '<esc>', opts)
 
--- Toggle nvim tree
-map('n', '<C-n>', '<cmd>:NvimTreeToggle<CR>', opts)
+-- Neotree
+map('n', '<C-n>', '<cmd>:NeoTreeShowToggle<CR>', opts)
 
 -- Fuzzy file finder: Telescope
 map('n', '<leader>ff', '<cmd>:Telescope find_files<CR>', opts)

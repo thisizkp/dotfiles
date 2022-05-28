@@ -1,10 +1,6 @@
-require("vars")
-require("opts")
-require("keys")
-require("plug")
+require "core.variables"
+require "core.options"
+require "core.mappings"
+require "core.colorscheme"
 
--- Plugin Settings
-require("plugins/misc")
-require("plugins/ts")
-require("plugins/lsp")
-require("plugins/org")
+require "plugins"

@@ -7,3 +7,4 @@ g.background = 'dark'
 -- keybindings
 g.mapleader = " "
 g.localleader = "\\"
+
