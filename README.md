@@ -8,6 +8,9 @@
 #### Editor
 - [nvim](https://neovim.io/)
 - [fantasque sans mono nerd font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FantasqueSansMono)
+
+#### Search
+- [fd](https://github.com/sharkdp/fd)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 #### Others
