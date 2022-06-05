@@ -1,11 +1,3 @@
-# Launch alacritty within tmux
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
-
 window:
   padding:
     x: 4
