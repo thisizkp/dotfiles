@@ -1,0 +1,36 @@
+# check if session already exists
+tmux has-session -t work
+if [ $? != 0 ]
+then
+  # create a new session work, main window 'editor'
+  tmux new-session -s work -n editor -d
+  tmux send-keys -t work 'cd ~/work/vndly' C-m
+  tmux send-keys -t work '. venv/bin/activate' C-m
+  tmux send-keys -t work 'nv .' C-m
+
+  # create a new window for the servers - django, webpack, nextJS
+  tmux new-window -n console -t work
+  tmux send-keys -t work:2 'cd ~/work/vndly' C-m
+  tmux send-keys -t work:2 '. venv/bin/activate' C-m
+  tmux send-keys -t work:2 'gco master && git pull && make migrate' C-m
+  tmux send-keys -t work:2 'make run-app' C-m
+
+  # create a new vertical split for webpack
+  tmux split-window -v -t work:2
+  tmux send-keys -t work:2.2 'cd ~/work/vndly' C-m
+  tmux send-keys -t work:2.2 '. venv/bin/activate' C-m
+  tmux send-keys -t work:2.2 'make bundleDev' C-m
+
+  # create a new vertical split for nextJS
+  tmux split-window -v -t work:2
+  tmux send-keys -t work:2.3 'cd ~/work/vndly' C-m
+  tmux send-keys -t work:2.3 '.venv/bin/activate' C-m
+  tmux send-keys -t work:2.3 'npm run dev' C-m
+
+  # arrange panes
+  tmux select-layout -t work even-vertical
+
+  # focus the main window 'editor' by default
+  tmux select-window -t work:1
+fi
+tmux attach -t work
