@@ -7,7 +7,7 @@
 
 #### Editor
 - [nvim](https://neovim.io/)
-- [fantasque sans mono nerd font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FantasqueSansMono)
+- [jetbrains mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/font-info.md#brew-macos-only)
 
 #### Search
 - [fd](https://github.com/sharkdp/fd)
