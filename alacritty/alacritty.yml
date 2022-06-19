@@ -1,3 +1,6 @@
+env:
+  TERM: xterm-256color
+
 window:
   padding:
     x: 4
@@ -8,22 +11,22 @@ window:
 # Font Family
 font:
   normal:
-    family: FantasqueSansMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono
     style: Regular
 
   bold:
-    family: FantasqueSansMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono 
     style: Bold
 
   italic:
-    family: FantasqueSansMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono 
     style: Italic
 
   bold_italic:
-    family: FantasqueSansMono Nerd Font Mono
+    family: JetBrainsMono Nerd Font Mono 
     style: Bold Italic
 
-  size: 16
+  size: 14
 
 draw_bold_text_with_bright_colors: true
 
