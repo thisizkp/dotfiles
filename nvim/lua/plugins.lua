@@ -123,7 +123,10 @@ function M.setup()
     -- note taking, gtd, org-mode
     use {
       "nvim-neorg/neorg",
-      requires = "nvim-lua/plenary.nvim",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-neorg/neorg-telescope"
+      },
       config = function()
         require("config.neorg").setup()
       end
