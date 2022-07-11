@@ -12,7 +12,9 @@ then
   tmux new-window -n console -t work
   tmux send-keys -t work:2 'cd ~/work/vndly' C-m
   tmux send-keys -t work:2 '. venv/bin/activate' C-m
-  tmux send-keys -t work:2 'gco master && git pull && make migrate' C-m
+  tmux send-keys -t work:2 'gco master && git pull' C-m
+  tmux send-keys -t work:2 'make stack-down && make stack-up' C-m
+  tmux send-keys -t work:2 './manage.py migrate_schemas -s tylan' C-m
   tmux send-keys -t work:2 'make run-app' C-m
 
   # create a new vertical split for webpack
