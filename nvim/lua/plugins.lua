@@ -43,6 +43,14 @@ function M.setup()
     -- load only when require
     use { "nvim-lua/plenary.nvim", module = "plenary" }
 
+    -- theme
+    use {
+      "catppuccin/nvim",
+      as = "catppuccin",
+      config = function()
+        require("config.catppuccin").setup()
+      end
+    }
 
     -- treesitter
     use {
@@ -109,15 +117,6 @@ function M.setup()
     use {
       "nvim-telescope/telescope.nvim",
       requires = "nvim-lua/plenary.nvim"
-    }
-
-    -- theme
-    use {
-      'folke/tokyonight.nvim',
-      config = function()
-        vim.g.tokyonight_style = "night"
-        vim.cmd [[colorscheme tokyonight]]
-      end
     }
 
     -- note taking, gtd, org-mode
