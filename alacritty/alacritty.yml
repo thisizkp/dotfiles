@@ -1,7 +1,7 @@
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 import:
-  - ~/.config/alacritty/colorschemes/melange/melange_light.yml
+  - ~/.config/alacritty/colorschemes/nightfox/nightfox.yml
 
 env:
   TERM: xterm-256color
