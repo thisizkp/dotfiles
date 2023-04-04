@@ -10,6 +10,9 @@ wk.register({
 	["<leader>f"] = {
 		name = "+file",
 		f = { "<cmd>Telescope find_files<cr>", "Find File" },
+		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
+		b = { "<cmd>Telescope buffers<cr>", "Find Buffers" },
+		h = { "<cmd>Telescope help_tags<cr>", "Find Help Tags" }
 	}
 })
 
