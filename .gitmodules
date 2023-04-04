@@ -1,3 +1,6 @@
 [submodule "alacritty/colorschemes/catppuccin"]
 	path = alacritty/colorschemes/catppuccin
 	url = git@github.com:catppuccin/alacritty.git
+[submodule "alacritty/catppuccin"]
+	path = alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty

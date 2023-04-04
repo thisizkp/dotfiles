@@ -1,7 +1,7 @@
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 import:
-  - ~/.config/alacritty/colorschemes/nightfox/nightfox.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 
 env:
   TERM: xterm-256color
@@ -12,8 +12,6 @@ window:
     y: 2
 
   startup_mode: SimpleFullscreen
-
-  opacity: 0.95
 
 font:
   normal:
@@ -34,8 +32,6 @@ font:
   offset:
     x: 0
     y: 2
-
-draw_bold_text_with_bright_colors: true
 
 selection:
   save_to_clipboard: true
