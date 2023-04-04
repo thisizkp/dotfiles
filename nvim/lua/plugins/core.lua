@@ -1,21 +1,14 @@
 return {
-	{ 
-		"catppuccin/nvim",
-		name = "catppuccin",
-		lazy = false,
+	{
+		"olimorris/onedarkpro.nvim",
 		priority = 1000,
 		init = function()
-		 	flavour = "latte"
-		 	transparent_background = true
-		 	term_colors = true
-		 	integrations = {
-		 		telescope = true,
-		 		treesitter = true,
-		 		which_key = true,
-		 	}
+			options = {
+			    transparency = true
+			  }
 		end,
 		config = function()
-			vim.cmd.colorscheme "catppuccin"
+			vim.cmd("colorscheme onelight")
 		end
 	},
 	{
