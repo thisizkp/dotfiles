@@ -13,8 +13,6 @@ window:
 
   startup_mode: SimpleFullscreen
 
-  opacity: 0.90
-
 font:
   normal:
     family: BerkeleyMono Nerd Font
