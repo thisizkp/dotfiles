@@ -28,5 +28,5 @@ require("keymaps")
 
 -- theme
 vim.opt.termguicolors = true
-vim.opt.background = "dark"
+vim.opt.background = "light"
 vim.cmd[[hi normal guibg=NONE ctermbg=NONE]]
