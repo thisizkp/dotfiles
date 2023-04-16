@@ -5,7 +5,7 @@ return {
 		init = function()
 			options = {
 			    transparency = true
-			  }
+			}
 		end,
 		config = function()
 			vim.cmd("colorscheme onelight")
