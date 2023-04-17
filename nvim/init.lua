@@ -31,6 +31,6 @@ require("keymaps")
 vim.opt.termguicolors = true
 
 -- indent
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 0
-vim.opt.softtabstop = 0
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.smarttab = true
