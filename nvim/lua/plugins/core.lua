@@ -4,7 +4,7 @@ return {
 		priority = 1000,
 		init = function()
 			options = {
-			    transparency = true
+				transparency = true
 			}
 		end,
 		config = function()
@@ -13,7 +13,11 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		dependencies = { {'nvim-lua/plenary.nvim'} },
+		dependencies = { { 'nvim-lua/plenary.nvim' } },
 	},
-	{ "folke/which-key.nvim", lazy = true }
+	{ "lukas-reineke/indent-blankline.nvim" },
+	{
+		"folke/which-key.nvim",
+		lazy = true
+	}
 }

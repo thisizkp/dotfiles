@@ -24,7 +24,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
+require("lsp")
 require("keymaps")
 
 -- theme
 vim.opt.termguicolors = true
+
+-- indent
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 0
+vim.opt.softtabstop = 0
