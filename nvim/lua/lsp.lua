@@ -7,6 +7,8 @@ end)
 
 lsp.ensure_installed({
 	'lua_ls',
+	'tsserver',
+	'vimls',
 	'zls'
 })
 
