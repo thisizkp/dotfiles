@@ -6,6 +6,7 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.ensure_installed({
+	'astro',
 	'lua_ls',
 	'tsserver',
 	'vimls',
