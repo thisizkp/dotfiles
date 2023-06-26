@@ -48,8 +48,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 2
+    y: 2
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -80,7 +80,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: SimpleFullscreen 
+  startup_mode: Fullscreen 
 
   # Window title
   #title: Alacritty
@@ -171,14 +171,14 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13
+  size: 12
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  #offset:
-  #  x: 0
-  #  y: 0
+  offset:
+    x: 0
+    y: 2
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -387,13 +387,13 @@ draw_bold_text_with_bright_colors: false
   #
   #command: None
 
-#selection:
+selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true 
 
 # cursor:
   # Cursor style
