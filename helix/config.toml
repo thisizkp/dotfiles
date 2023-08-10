@@ -2,3 +2,6 @@ theme = "gruvbox_light"
 
 [editor]
 line-number = "relative"
+
+[keys.insert]
+j = { k = "normal_mode" }
