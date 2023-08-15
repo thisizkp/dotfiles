@@ -3,5 +3,9 @@ theme = "gruvbox_light"
 [editor]
 line-number = "relative"
 
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
 [keys.insert]
 j = { k = "normal_mode" }
