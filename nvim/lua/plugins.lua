@@ -11,6 +11,13 @@ return {
 		end
 	},
 	{
+		'numToStr/Comment.nvim',
+		lazy = false,
+		config = function()
+			require('Comment').setup()
+		end
+	},
+	{
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.4',
 		dependencies = {
