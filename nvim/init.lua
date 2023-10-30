@@ -14,6 +14,9 @@ vim.opt.smarttab = true	-- enhances the behaviour of tab key based on context
 -- background
 vim.opt.background = "light"
 
+-- keymappings
+vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
+
 -- package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
