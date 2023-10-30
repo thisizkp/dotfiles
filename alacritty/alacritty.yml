@@ -6,9 +6,9 @@ env:
 
 window:
   padding:
-    x: 2
-    y: 2
-  startup_mode: Fullscreen 
+    x: 4
+    y: 4
+  startup_mode: Windowed
   dynamic_title: true
   option_as_alt: Both 
 
@@ -18,24 +18,24 @@ scrolling:
 
 font:
   normal:
-    family: MonoLisa 
+    family: "MonoLisa Nerd Font" 
     style: Regular
 
   bold:
-    family: MonoLisa 
+    family: "MonoLisa Nerd Font"
     style: Bold
 
   italic:
-    family: MonoLisa 
+    family: "MonoLisa Nerd Font"
     style: Regular Italic
 
   bold_italic:
-    family: MonoLisa 
+    family: "MonoLisa Nerd Font"
     style: Bold Italic
 
-  size: 13
+  size: 14
 
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 selection:
   save_to_clipboard: true 
