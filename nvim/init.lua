@@ -11,6 +11,9 @@ vim.opt.shiftwidth = 4	-- number of spaces used while indentation
 vim.opt.softtabstop = 4	-- number of spaces when editing text
 vim.opt.smarttab = true	-- enhances the behaviour of tab key based on context
 
+-- background
+vim.opt.background = "light"
+
 -- package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
