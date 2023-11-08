@@ -1,6 +1,10 @@
 -- set leader to <Space>
 vim.g.mapleader = " "
 
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- options
 vim.opt.number = true
 vim.opt.relativenumber = true
