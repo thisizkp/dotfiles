@@ -18,19 +18,19 @@ scrolling:
 
 font:
   normal:
-    family: "JetBrainsMono Nerd Font Mono" 
+    family: "MonoLisa Nerd Font" 
     style: Regular
 
   bold:
-    family: "JetBrainsMono Nerd Font Mono"
+    family: "MonoLisa Nerd Font"
     style: Bold
 
   italic:
-    family: "JetBrainsMono Nerd Font Mono"
+    family: "MonoLisa Nerd Font"
     style: Regular Italic
 
   bold_italic:
-    family: "JetBrainsMono Nerd Font Mono"
+    family: "MonoLisa Nerd Font"
     style: Bold Italic
 
   size: 14
