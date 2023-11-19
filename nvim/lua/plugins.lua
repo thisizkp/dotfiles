@@ -1,11 +1,11 @@
 return {
-	{ 
-		"ellisonleao/gruvbox.nvim", 
-		priority = 1000 , 
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
 		config = function()
 			require('gruvbox').setup()
 			vim.cmd('colorscheme gruvbox')
-		end 
+		end
 	},
 	{
 		'numToStr/Comment.nvim',
@@ -26,59 +26,92 @@ return {
 			vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 		end
 	},
-{
-  "nvim-tree/nvim-tree.lua",
-  version = "*",
-  lazy = false,
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  },
-  config = function()
-    require("nvim-tree").setup({
-		view = {
-			width = 30
-		}
-	})
-  end,
-},
-	"github/copilot.vim",
-	"neovim/nvim-lspconfig",
 	{
-		"williamboman/mason.nvim",
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
 		config = function()
-			require("mason").setup()
+			require("nvim-tree").setup({
+				view = {
+					width = 30
+				}
+			})
+		end,
+	},
+	"github/copilot.vim",
+	{
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v3.x',
+		lazy = true,
+		config = false,
+		init = function()
+			-- Disable automatic setup, we are doing it manually
+			vim.g.lsp_zero_extend_cmp = 0
+			vim.g.lsp_zero_extend_lspconfig = 0
+		end,
+	},
+	{
+		'williamboman/mason.nvim',
+		lazy = false,
+		config = true,
+	},
+	{
+		'hrsh7th/nvim-cmp',
+		event = 'InsertEnter',
+		dependencies = {
+			{ 'L3MON4D3/LuaSnip' },
+		},
+		config = function()
+			local lsp_zero = require('lsp-zero')
+			lsp_zero.extend_cmp()
+
+			local cmp = require('cmp')
+			local cmp_action = lsp_zero.cmp_action()
+
+			cmp.setup({
+				formatting = lsp_zero.cmp_format(),
+				mapping = cmp.mapping.preset.insert({
+					['<C-Space>'] = cmp.mapping.complete(),
+					['<C-u>'] = cmp.mapping.scroll_docs(-4),
+					['<C-d>'] = cmp.mapping.scroll_docs(4),
+					['<C-f>'] = cmp_action.luasnip_jump_forward(),
+					['<C-b>'] = cmp_action.luasnip_jump_backward(),
+				})
+			})
 		end
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
+		'neovim/nvim-lspconfig',
+		cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
+		event = { 'BufReadPre', 'BufNewFile' },
+		dependencies = {
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'williamboman/mason-lspconfig.nvim' },
+		},
 		config = function()
-			require("mason-lspconfig").setup()
-			
-			local handlers = {
-           -- The first entry (without a key) will be the default handler
-           -- and will be called for each installed server that doesn't have
-           -- a dedicated handler.
-           function (server_name) -- default handler (optional)
-               require("lspconfig")[server_name].setup {}
-           end,
-           -- Next, you can provide targeted overrides for specific servers.
-           -- ["rust_analyzer"] = function ()
-           --     require("rust-tools").setup {}
-           -- end,
-           -- ["lua_ls"] = function ()
-           --     local lspconfig = require("lspconfig")
-           --     lspconfig.lua_ls.setup {
-           --         settings = {
-           --             Lua = {
-           --                 diagnostics = {
-           --                     globals = { "vim" }
-           --                 }
-           --             }
-           --         }
-           --     }
-           -- end
-	   }
-	   require("mason-lspconfig").setup_handlers(handlers)
-   end
-  }
+			-- This is where all the LSP shenanigans will live
+			local lsp_zero = require('lsp-zero')
+			lsp_zero.extend_lspconfig()
+
+			lsp_zero.on_attach(function(client, bufnr)
+				-- see :help lsp-zero-keybindings
+				-- to learn the available actions
+				lsp_zero.default_keymaps({ buffer = bufnr })
+			end)
+
+			require('mason-lspconfig').setup({
+				ensure_installed = {},
+				handlers = {
+					lsp_zero.default_setup,
+					lua_ls = function()
+						local lua_opts = lsp_zero.nvim_lua_ls()
+						require('lspconfig').lua_ls.setup(lua_opts)
+					end,
+				}
+			})
+		end
+	}
 }
