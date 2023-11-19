@@ -10,10 +10,10 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- indent
-vim.opt.tabstop = 4	-- number of spaces a tab character will occupy
-vim.opt.shiftwidth = 4	-- number of spaces used while indentation 
-vim.opt.softtabstop = 4	-- number of spaces when editing text
-vim.opt.smarttab = true	-- enhances the behaviour of tab key based on context
+vim.opt.tabstop = 4     -- number of spaces a tab character will occupy
+vim.opt.shiftwidth = 4  -- number of spaces used while indentation
+vim.opt.softtabstop = 4 -- number of spaces when editing text
+vim.opt.smarttab = true -- enhances the behaviour of tab key based on context
 
 -- background
 vim.opt.background = "light"
