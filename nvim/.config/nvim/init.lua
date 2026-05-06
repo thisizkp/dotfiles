@@ -17,6 +17,11 @@ local is_dark = vim.fn.system("defaults read -g AppleInterfaceStyle 2>/dev/null"
 
 require("lazy").setup({
   {
+    "stevearc/oil.nvim",
+    lazy = false,
+    opts = {},
+  },
+  {
     "navarasu/onedark.nvim",
     priority = 1000,
     opts = {
