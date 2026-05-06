@@ -15,6 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local is_dark = vim.fn.system("defaults read -g AppleInterfaceStyle 2>/dev/null"):match("Dark") ~= nil
 
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 require("lazy").setup({
   {
     "stevearc/oil.nvim",
