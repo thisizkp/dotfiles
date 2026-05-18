@@ -1,0 +1,36 @@
+gui:
+  theme:
+    activeBorderColor:
+      - cyan
+      - bold
+    inactiveBorderColor:
+      - default
+    searchingActiveBorderColor:
+      - yellow
+      - bold
+    optionsTextColor:
+      - blue
+    selectedLineBgColor:
+      - "#e5e5e6"
+    selectedRangeBgColor:
+      - "#e5e5e6"
+    inactiveViewSelectedLineBgColor:
+      - default
+    cherryPickedCommitFgColor:
+      - blue
+    cherryPickedCommitBgColor:
+      - cyan
+    markedBaseCommitFgColor:
+      - blue
+    markedBaseCommitBgColor:
+      - yellow
+    unstagedChangesColor:
+      - red
+    defaultFgColor:
+      - default
+
+git:
+  pagers:
+    - colorArg: always
+      pager: >-
+        delta --light --paging=never --syntax-theme=ansi --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
