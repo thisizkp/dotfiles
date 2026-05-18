@@ -53,11 +53,11 @@ if [[ "$theme" != "dark" && "$theme" != "light" ]]; then
 fi
 
 if [[ "$theme" == "dark" ]]; then
-  selected_bg="#3e4451"
-  pager='delta --dark --paging=never --syntax-theme=ansi --line-numbers --minus-style='\''syntax "#5a1f24"'\'' --minus-emph-style='\''syntax "#7c2d33"'\'' --minus-empty-line-marker-style='\''normal "#5a1f24"'\'' --plus-style='\''syntax "#1f5a33"'\'' --plus-emph-style='\''syntax "#2d7a45"'\'' --plus-empty-line-marker-style='\''normal "#1f5a33"'\'' --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"'
+  selected_bg="#3C3836"
+  pager='delta --dark --paging=never --syntax-theme=ansi --line-numbers --minus-style='\''syntax "#442E2D"'\'' --minus-emph-style='\''syntax "#5A3835"'\'' --minus-empty-line-marker-style='\''normal "#442E2D"'\'' --plus-style='\''syntax "#34381B"'\'' --plus-emph-style='\''syntax "#3F4724"'\'' --plus-empty-line-marker-style='\''normal "#34381B"'\'' --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"'
 else
-  selected_bg="#e5e5e6"
-  pager='delta --light --paging=never --syntax-theme=ansi --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"'
+  selected_bg="#F2E5BC"
+  pager='delta --light --paging=never --syntax-theme=ansi --line-numbers --minus-style='\''syntax "#F0C6B6"'\'' --minus-emph-style='\''syntax "#E9A992"'\'' --minus-empty-line-marker-style='\''normal "#F0C6B6"'\'' --plus-style='\''syntax "#DDE5A2"'\'' --plus-emph-style='\''syntax "#CBD577"'\'' --plus-empty-line-marker-style='\''normal "#DDE5A2"'\'' --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"'
 fi
 
 mkdir -p "${target_file:h}"

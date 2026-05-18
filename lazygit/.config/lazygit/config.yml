@@ -11,9 +11,9 @@ gui:
     optionsTextColor:
       - blue
     selectedLineBgColor:
-      - "#e5e5e6"
+      - "#F2E5BC"
     selectedRangeBgColor:
-      - "#e5e5e6"
+      - "#F2E5BC"
     inactiveViewSelectedLineBgColor:
       - default
     cherryPickedCommitFgColor:
@@ -33,4 +33,4 @@ git:
   pagers:
     - colorArg: always
       pager: >-
-        delta --light --paging=never --syntax-theme=ansi --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+        delta --light --paging=never --syntax-theme=ansi --line-numbers --minus-style='syntax "#F0C6B6"' --minus-emph-style='syntax "#E9A992"' --minus-empty-line-marker-style='normal "#F0C6B6"' --plus-style='syntax "#DDE5A2"' --plus-emph-style='syntax "#CBD577"' --plus-empty-line-marker-style='normal "#DDE5A2"' --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
