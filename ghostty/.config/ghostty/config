@@ -1,0 +1,29 @@
+# Ghostty Configuration
+# Docs: https://ghostty.org/docs/config
+
+# Theme (auto-switches with macOS appearance)
+theme = light:Atom One Light,dark:Atom One Dark
+faint-opacity = 0.85
+
+# Font
+font-family = "JetBrains Mono"
+font-family-italic = "JetBrains Mono"
+font-family-bold-italic = "JetBrains Mono"
+font-size = 15
+
+# Padding (in points, auto-scaled for DPI)
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+
+# Split panes
+keybind = super+shift+e=new_split:up
+keybind = super+alt+h=goto_split:left
+keybind = super+alt+j=goto_split:down
+keybind = super+alt+k=goto_split:up
+keybind = super+alt+l=goto_split:right
+
+# Lesson 1: Notify when long commands finish (while window is unfocused)
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = no-bell,notify
+notify-on-command-finish-after = 30s
