@@ -25,8 +25,8 @@ brew "nvm"
 brew "rustup"
 
 # Core apps
+# Codex is installed separately until the Homebrew cask is verified clean.
 cask "ghostty"
-cask "codex"
 cask "google-chrome"
 cask "obsidian"
 cask "raycast"

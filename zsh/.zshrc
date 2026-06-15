@@ -17,6 +17,11 @@ path_add() {
 path_add "$HOME/.local/bin"
 path_add "$HOME/go/bin"
 
+if command -v brew >/dev/null 2>&1; then
+  rustup_prefix="$(brew --prefix rustup 2>/dev/null)"
+  path_add "$rustup_prefix/bin"
+fi
+
 if [[ -r "$HOME/.cargo/env" ]]; then
   . "$HOME/.cargo/env"
 fi

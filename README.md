@@ -74,6 +74,9 @@ STOW_TARGET=/tmp/dotfiles-test just dry-run
 `Brewfile` is the personal machine baseline. It should include broadly useful
 tools, apps, and tools required by tracked dotfiles.
 
+Codex is intentionally not installed by `Brewfile` right now. Install it
+separately until the Homebrew cask is verified clean on this machine.
+
 Do not add every project dependency here. Install project-specific tools when a
 repo or workflow asks for them.
 
