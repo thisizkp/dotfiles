@@ -16,6 +16,7 @@ path_add() {
 # --- environment ---
 path_add "$HOME/.local/bin"
 path_add "$HOME/go/bin"
+path_add "/Applications/Codex.app/Contents/Resources"
 
 if command -v brew >/dev/null 2>&1; then
   rustup_prefix="$(brew --prefix rustup 2>/dev/null)"
