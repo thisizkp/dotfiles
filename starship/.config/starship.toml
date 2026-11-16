@@ -1,9 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Compact path and Git prompt; Kubernetes/AWS context lives in Ghostty's title.
-# Icons use Ghostty's bundled Symbols Nerd Font fallback; no font override needed.
+# Compact path and Git prompt, with Kubernetes and AWS context.
+# Icons rely on the terminal's Nerd Font symbol fallback.
 add_newline = false
-format = '$username$hostname$directory$git_branch$git_commit$git_state$git_status$nodejs$python$golang$rust$zig$docker_context$cmd_duration$status$jobs$character'
+format = '$username$hostname$directory$git_branch$git_commit$git_state$git_status$nodejs$python$golang$rust$zig$docker_context$kubernetes$aws$cmd_duration$status$jobs$character'
 
 [directory]
 format = '[ $path]($style)[$read_only]($read_only_style) '
@@ -54,6 +54,15 @@ format = '[zig $version]($style) '
 [docker_context]
 format = '[docker $context]($style) '
 only_with_files = true
+
+[kubernetes]
+disabled = false
+format = '[k8s:$context(/$namespace)]($style) '
+style = 'bold cyan'
+
+[aws]
+format = '[aws:$profile]($style) '
+style = 'bold yellow'
 
 [cmd_duration]
 min_time = 2000
