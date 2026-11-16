@@ -22,30 +22,12 @@ unset _front
 
 # --- environment ---
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
-export OBSIDIAN_VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes"
 
 # --- prompt ---
 if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
-# --- utilities ---
-lazygit() {
-  if [[ -x "$HOME/.config/lazygit/sync-theme.zsh" ]]; then
-    "$HOME/.config/lazygit/sync-theme.zsh"
-  fi
-
-  command lazygit "$@"
-}
-
-notes() {
-  if [[ ! -d "$OBSIDIAN_VAULT" ]]; then
-    echo "Obsidian vault not found: $OBSIDIAN_VAULT" >&2
-    return 1
-  fi
-
-  cd "$OBSIDIAN_VAULT" || return
-}
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/kp/.docker/completions $fpath)
 autoload -Uz compinit
@@ -134,7 +116,3 @@ awsctx() {
   fi
   command aws sts get-caller-identity --profile "$AWS_PROFILE" --no-cli-pager --query '{Account:Account,Arn:Arn}' --output json
 }
-
-# Infrastructure context in the terminal title, with details on demand.
-# (title.zsh currently only activates in Ghostty.)
-[[ -r "$HOME/.local/lib/terminal-context/title.zsh" ]] && source "$HOME/.local/lib/terminal-context/title.zsh"
