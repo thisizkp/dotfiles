@@ -116,3 +116,5 @@ awsctx() {
   fi
   command aws sts get-caller-identity --profile "$AWS_PROFILE" --no-cli-pager --query '{Account:Account,Arn:Arn}' --output json
 }
+
+alias codex='FORCE_COLOR=2 codex'
