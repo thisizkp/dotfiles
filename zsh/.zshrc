@@ -21,7 +21,6 @@ path=(${^_front}(N-/) $path)
 unset _front
 
 # --- environment ---
-export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
 # --- prompt ---
 if command -v starship >/dev/null 2>&1; then

@@ -15,10 +15,6 @@ brew "tree"
 brew "neovim"
 brew "rust-analyzer"
 
-# Git workflow
-brew "lazygit"
-brew "git-delta"
-
 # Broad development managers
 brew "go"
 brew "nvm"
