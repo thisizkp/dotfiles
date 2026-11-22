@@ -121,4 +121,7 @@ export CLICOLOR=1                                                             # 
 export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS:+$FZF_DEFAULT_OPTS }--color=16"   # fzf uses the terminal's 16 colours
 # --- end colour consistency ---
 
+# k9s does not use 24-bit colour under Rex's own terminal type, so its skin came out grey (added 2026-11-17)
+alias k9s='TERM=xterm-256color k9s'
+
 alias codex='FORCE_COLOR=2 codex'
