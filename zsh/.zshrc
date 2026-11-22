@@ -116,4 +116,9 @@ awsctx() {
   command aws sts get-caller-identity --profile "$AWS_PROFILE" --no-cli-pager --query '{Account:Account,Arn:Arn}' --output json
 }
 
+# --- colour consistency (added 2026-11-17): tools use the terminal's palette ---
+export CLICOLOR=1                                                             # coloured ls on macOS
+export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS:+$FZF_DEFAULT_OPTS }--color=16"   # fzf uses the terminal's 16 colours
+# --- end colour consistency ---
+
 alias codex='FORCE_COLOR=2 codex'
