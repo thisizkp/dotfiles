@@ -124,4 +124,8 @@ export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS:+$FZF_DEFAULT_OPTS }--color=16"   # 
 # k9s does not use 24-bit colour under Rex's own terminal type, so its skin came out grey (added 2026-11-17)
 alias k9s='TERM=xterm-256color k9s'
 
+# default editor (added 2026-11-17): used by git and others
+export EDITOR=nvim
+export VISUAL=nvim
+
 alias codex='FORCE_COLOR=2 codex'
