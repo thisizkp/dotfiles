@@ -1,0 +1,39 @@
+# One Dark (Atom One Dark) for Rex, with Codex 256-colour slots. Ghostty theme format.
+palette = 0=#21252b
+palette = 1=#e06c75
+palette = 2=#98c379
+palette = 3=#e5c07b
+palette = 4=#61afef
+palette = 5=#c678dd
+palette = 6=#56b6c2
+palette = 7=#abb2bf
+palette = 8=#767676
+palette = 9=#e06c75
+palette = 10=#98c379
+palette = 11=#e5c07b
+palette = 12=#61afef
+palette = 13=#c678dd
+palette = 14=#56b6c2
+palette = 15=#abb2bf
+background = #282c34
+foreground = #abb2bf
+cursor-color = #abb2bf
+cursor-text = #282c34
+selection-background = #3e4451
+selection-foreground = #abb2bf
+
+# Codex 256-colour slots (FORCE_COLOR=2). Lets Codex's shaded areas follow light/dark switches.
+# Slots Codex uses when started in dark mode:
+palette = 238=#41454d
+palette = 239=#454951
+palette = 22=#213a2b
+palette = 52=#4a221d
+# Slots Codex uses when started in light mode, shown here with their dark equivalents:
+palette = 255=#41454d
+palette = 194=#213a2b
+palette = 157=#2b4a37
+palette = 224=#4a221d
+palette = 217=#5c2b25
+palette = 236=#abb2bf
+palette = 242=#7f848e
+palette = 26=#61afef

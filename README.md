@@ -80,6 +80,25 @@ separately until the Homebrew cask is verified clean on this machine.
 Do not add every project dependency here. Install project-specific tools when a
 repo or workflow asks for them.
 
+## Light/dark theming
+
+Rex follows the macOS appearance using two custom themes in
+`rex/.config/rex/themes`: `One Light Codex` and `One Dark Codex`. They are the
+One themes plus remapped 256-colour slots, so Codex's shaded areas change with
+the appearance instead of staying in the colours Codex started with.
+
+Rex only loads custom themes through its own importer, so on a new machine,
+after `just install`:
+
+1. In Rex, open Settings > Themes > Import and import both files from
+   `~/.config/rex/themes`. Select them as the light and dark themes.
+2. Set Settings > Interface > Color scheme to Auto.
+3. In `~/.codex/config.toml`, set `theme = "ansi"` under `[tui]`.
+
+The `codex` alias in `.zshrc` sets `FORCE_COLOR=2`, which makes Codex use the
+256-colour slots these themes remap. After editing a theme file, import it
+again; Rex does not reload it from disk.
+
 ## Conflicts
 
 Stow will not overwrite existing files. If a file already exists on a new
